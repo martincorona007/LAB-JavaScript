@@ -30,20 +30,40 @@ const getData = async function () {
 
 };
 
+const loopThroughUrl = (urls) => {
+  for(url of urls){
+    console.log(url)
+  }
+}
+const getData2 = async function(){
+  const arrayOfPromises = urls.map(url => fetch(url));
+  for(const request of arrayOfPromises){
+    console.log(request)
+  }
+  for await(const request of arrayOfPromises){
+    const data = await request.json();
+    console.log(data)
+    //In this case, for-await takes each item from the array and waits for it to resolve. You'll get the first response even if the second response isn't ready yet, but you'll always get the responses in the correct order.
+  }
+}
+restParam(1, 2, 3, 4, 5);
+
+function restParam(p1, p2, ...p3) {
+  // p1 = 1
+  // p2 = 2`
+  // p3 = [3, 4, 5]
+}
 
 
+const myObject = {
+  a: 1,
+  b: 2,
+  c: 3
+};
 
-
-
-
-
-
-
-
-
-
-
-
+const { a, ...x } = myObject;
+// a = 1
+// x = { b: 2, c: 3 }
 
 // const promise = new Promise((resolve,rejected)=>{
 //   setTimeout(()=>{
