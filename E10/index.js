@@ -1,3 +1,18 @@
+//5 JavaScript One-Liners that come in handy 🛠
+//============
+//1 get unique element from an array
+const getUnique =(arr) => [...new Set(arr)]
+//2 scroll to the top
+const scrollToTop = (element) => element.scrollIntoView({behavior: "smooth", block: "start"});
+//3 generate a random color
+const generateRandomHexColor = () => `#${Math.floor(Math.random()* 0xfffff).toString(16)}`;
+//4 copy to clipboard
+const copyToClipboard = (text)=> navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+//5 shuffle an array
+const shuffleArray = (arr) => arr.sort(()=> Math.random() - 0.5);
+
+
+//============
 //1
 async function getUsers(){
   const response = await fetch("https://jsonplaceholder.typicode.com/users/")
@@ -29,6 +44,7 @@ const getData = async function () {
   }
 
 };
+
 
 const loopThroughUrl = (urls) => {
   for(url of urls){
