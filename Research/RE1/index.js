@@ -1,3 +1,4 @@
+//Redeclaring a Variable Using let
 function speakSomething(){//function expression
   console.log("Speaking");
 }

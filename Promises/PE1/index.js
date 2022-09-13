@@ -1,3 +1,4 @@
+
 //5 JavaScript One-Liners that come in handy 🛠
 //============
 //1 get unique element from an array
@@ -11,6 +12,48 @@ const copyToClipboard = (text)=> navigator.clipboard?.writeText && navigator.cli
 //5 shuffle an array
 const shuffleArray = (arr) => arr.sort(()=> Math.random() - 0.5);
 
+let aPromiseToServer = new Promise(function(resolved,rejected){
+  let connection = 0;
+  if(connection){
+    resolved("Connected")
+  }else{
+    rejected("Not connected");
+  }
+})
+aPromiseToServer.then((answ)=>{
+  console.log("-> ",answ)
+}).catch((e)=> {
+  console.log("=> ",e)
+})
+
+let aPromiseToMom = new Promise((resolve,reject)=>{
+  let cleanDishes = 1;
+
+  if(cleanDishes){
+    resolve("YES")
+  }else{
+    reject("Error");
+  }
+
+})
+aPromiseToMom.then((element)=> {
+  console.log("Pos si ", element)
+}).catch((e)=> {
+  console.log("Nel ", e)
+})
+const promise1 = new Promise((resolve,rejected)=> {
+  resolve("solved")
+  rejected("rejected")
+})
+const promise2 = new Promise.resolve("yes")
+const promise22 = new Promise.reject("rejected")
+
+promise1.then((element)=> {console.log(element)})
+promise1.catch((e)=> {console.log(e)})
+
+async function  names(){
+  return 2;
+}
 
 //============
 //1
