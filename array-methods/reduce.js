@@ -7,9 +7,11 @@ for(let i = 0 ; i < students.length; i++){
 //console.log(sumAges)
 //===ES5
 let result = students.reduce(function(count,students){
+  console.log("a ",count);
+  console.log("b " ,students.age)
   return count + students.age
 },0)
-//console.log(result)
+console.log("==? ",result)
 //===ES6
 let result0 = students.reduce((count,element)=> count + element.age,0);
 //console.log(result0)
