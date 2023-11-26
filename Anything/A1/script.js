@@ -1,3 +1,15 @@
+
+var i = 10;
+function sqr(num){
+	function printI(){
+		console.log(i);
+	}
+	printI();
+	return num * num;
+}
+var a = sqr(i);
+
+
 // == skip values in array destructuring
 // const colors = [
 //   'red',
